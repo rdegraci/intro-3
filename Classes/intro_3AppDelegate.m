@@ -8,7 +8,7 @@
 
 #import "intro_3AppDelegate.h"
 #import "MainViewController.h"
-
+#import "LocationManagerDelegate.h"
 @implementation intro_3AppDelegate
 
 
@@ -24,6 +24,9 @@
     // Override point for customization after application launch.  
 
 	self.locationManager = [[CLLocationManager alloc]init];
+	locationManager.delegate = locationManagerDelegate;
+	
+	[locationManager startUpdatingLocation];
 	
     // Add the main view controller's view to the window and display.
     [self.window addSubview:mainViewController.view];

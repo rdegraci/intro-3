@@ -11,6 +11,7 @@
 
 - (void)locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation {
 	
-	NSLog(@"location");
+	NSLog(@"didUpdateToLocation %+.6f, %+.6f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+
 }
 @end
